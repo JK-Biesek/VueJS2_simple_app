@@ -3,8 +3,9 @@
   <div class="holder">
   <form @submit.prevent="addSkill">
     <input type="text" placeholder="Enter your skill" v-model="skill"   v-validate="'min:5'" name="skill">
+    <transition name="alert-in">
     <p class="alert" v-if="errors.has('skill')">{{errors.first('skill')}}</p>
-    {{skill}}
+  </transition>
     </form>
     <ul>
       <li v-for="(data,index) in skills" :key='index'> {{data.skill}} </li>
