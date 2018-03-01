@@ -1,3 +1,4 @@
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
 .holder {
     background: #fff;
   }
@@ -31,7 +32,8 @@
     border: none;
     padding: 20px;
     font-size: 13px;
-    color: #687F7F;
+    color: #fff;
+    background-color: #35495E;
   }
   .alert-in-enter-active{
   animation: bounce-in .5s;
