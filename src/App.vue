@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <skills msg="Welcome to Your Vue.js App"/>
+  <router-view />
   </div>
 </template>
 
@@ -25,6 +26,7 @@ body {
   grid-template-rows: auto;
   justify-items: center;
   align-items: center;
+  padding-top: 30px;
 }
 body, html {
   margin: 0;
