@@ -2,7 +2,7 @@
   <div class="hello">
   <div class="holder">
   <form @submit.prevent="addSkill">
-    <input type="text" placeholder="Enter your skill" v-model="skill"   v-validate="'min:5'" name="skill">
+    <input type="text" placeholder="Enter your skill" v-model="skill"   v-validate="'min:3'" name="skill">
     <transition name="alert-in">
     <p class="alert" v-if="errors.has('skill')">{{errors.first('skill')}}</p>
   </transition>
@@ -10,7 +10,7 @@
     <ul>
       <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
       <li v-for="(data,index) in skills" :key='index'> {{data.skill}}
-        
+
       <i class="fa fa-minus-circle" v-on:click="remove(index)"></i>
     </li>
     </transition-group>
@@ -41,10 +41,10 @@ export default {
     this.skill = '';
     }
     })
-    }
   },
-  remove(id){
-    this.skills.splice(id,1);
+    remove(id){
+      this.skills.splice(id,1);
+  }
   }
 }
 </script>

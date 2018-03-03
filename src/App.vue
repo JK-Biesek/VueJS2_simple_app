@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img  class="img_vue" src="./assets/logo.png">
     <skills msg="Welcome to Your Vue.js App"/>
   <router-view />
   </div>
@@ -27,6 +27,9 @@ body {
   justify-items: center;
   align-items: center;
   padding-top: 30px;
+}
+#app > .img_vue{
+  margin-left: 210px;
 }
 body, html {
   margin: 0;
